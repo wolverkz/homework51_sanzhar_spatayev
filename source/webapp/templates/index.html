@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="title">
+        <h1>Welcome to the cat simulator game!</h1>
+        <p>Please, write a name for your cat</p>
+    </div>
+    <div class="name">
+        <form action="cat_game" method="post">
+            {% csrf_token %}
+            <label for="cat_name">Name</label>
+            <input type="text" name="cat_name" id="cat_name" onkeydown="return /[a-zA-Z]/i.test(event.key)" class="text"
+                   required>
+            <input type="submit" value="Submit" class="button">
+        </form>
+    </div>
+</body>
+</html>

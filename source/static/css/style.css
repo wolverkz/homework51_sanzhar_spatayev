@@ -1,0 +1,54 @@
+* {
+    background-color: black;
+    color: wheat;
+}
+
+.title {
+    text-align: center;
+}
+
+.title > p {
+    font-size: 25px;
+}
+
+.name {
+    text-align: center;
+    font-size: 25px;
+}
+
+.text {
+    width: 250px;
+    height: 30px;
+    font-size: 25px;
+}
+
+.button {
+    color: black;
+    background-color: wheat;
+    border-color: white;
+    border-width: 5px;
+    font-size: 20px;
+}
+
+.game_area {
+    display: flex;
+}
+
+img {
+    width: 450px;
+    height: 450px;
+}
+
+.info {
+    margin-left: 50px;
+    font-size: 40px;
+}
+
+.choice {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.choice > form > select {
+    font-size: 30px;
+}

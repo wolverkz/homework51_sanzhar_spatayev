@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="game_area">
+        <div>
+            <img src="{% static 'images/' %}{{ image }}">
+        </div>
+        <div class="info">
+            <p>Name: {{ name }}</p>
+            <p>Age: 1 year</p>
+            <p>Mood: {{ mood }}</p>
+            <p>Hunger: {{ hunger }}</p>
+            <p>{{ message }}</p>
+        </div>
+    </div>
+    <div class="choice">
+        <form action="game" method="POST">
+             {% csrf_token %}
+            <select name="choice" required>
+                <option value="" disabled selected hidden>Choose an action</option>
+                <option value="sleep">Sleep</option>
+                <option value="play">Play</option>
+                <option value="feed">Feed</option>
+            </select>
+            <input type="submit" value="Submit" class="button">
+        </form>
+    </div>
+</body>
+</html>
